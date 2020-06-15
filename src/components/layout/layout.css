@@ -1,0 +1,50 @@
+:root {
+  --blue-800: #090715;
+  --blue-100: #eae8f4;
+
+  --red-600: #cf1e2a;
+  --red-800: #430307;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  position: relative;
+  box-sizing: border-box;
+}
+
+@keyframes body-bg-animate {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--blue-800, black);
+  background-image: linear-gradient(
+    120deg,
+    var(--blue-800),
+    #161660,
+    #850b13,
+    #7b5704
+  );
+  background-size: 300%;
+  animation: body-bg-animate 20s infinite alternate;
+  color: var(--blue-100, white);
+}
+
+img {
+  max-width: 100%;
+}
+
+#___gatsby > div {
+  min-height: 100vh;
+  display: grid;
+}
