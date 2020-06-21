@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import Heroes from '../components/ui/heroes/heroes'
+import SEO from '../components/seo'
 
 const DcHeroes = memo(function DcHeroes() {
   const data = useStaticQuery(graphql`
@@ -15,7 +16,6 @@ const DcHeroes = memo(function DcHeroes() {
             link
           }
         }
-        totalCount
       }
     }
   `)
@@ -27,6 +27,19 @@ const DcHeroes = memo(function DcHeroes() {
         backgroundColor: '#232427',
       }}
     >
+      <SEO title='DC Heroes' />
+
+      <h1
+        style={{
+          marginBlockStart: 0,
+          paddingInlineStart: '1em',
+          paddingBlockStart: '1em',
+          color: 'var(--blue-100, white)',
+        }}
+      >
+        DC Heroes
+      </h1>
+
       <Heroes heroes={data.allDcHeroes.edges.map((n) => n.node)} />
 
       {/* <h4>
