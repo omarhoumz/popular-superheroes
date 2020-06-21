@@ -3,8 +3,6 @@ const admin = require('firebase-admin')
 
 const fetch = require('node-fetch')
 
-console.log({ env: process.env.NODE_ENV })
-
 if (process.env.NODE_ENV === 'production') {
   admin.initializeApp()
 } else {
