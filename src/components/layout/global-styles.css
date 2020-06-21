@@ -1,0 +1,38 @@
+:root {
+  --blue-800: #090715;
+  --blue-100: #eae8f4;
+
+  --red-400: #e84651;
+  --red-600: #cf1e2a;
+  --red-800: #430307;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  padding-block-end: 3px;
+  border-bottom: 1px solid transparent;
+
+  transition: 160ms ease;
+  transition-property: color, border-color;
+}
+
+a:hover {
+  border-bottom-color: inherit;
+}
