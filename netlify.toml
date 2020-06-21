@@ -1,2 +1,0 @@
-[build]
-  command = "(cd functions && (npm i && npm run deploy:ci)) & yarn build"
