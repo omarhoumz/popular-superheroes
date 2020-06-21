@@ -1,0 +1,2 @@
+[build]
+  command = "(cd functions && yarn deploy:ci) & yarn build"

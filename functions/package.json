@@ -7,6 +7,7 @@
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
+    "deploy:ci": "firebase deploy --token \"$FIREBASE_TOKEN\" --only functions --non-interactive",
     "logs": "firebase functions:log"
   },
   "engines": {
