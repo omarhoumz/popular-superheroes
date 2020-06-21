@@ -18,17 +18,20 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "node-fetch": "^2.6.0",
     "prettier": "2.0.5"
   },
   "keywords": [
-    "superheroes", "marvel", "dc"
+    "superheroes",
+    "marvel",
+    "dc"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "yarn develop",
+    "start": "(cd functions && yarn serve) & yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
