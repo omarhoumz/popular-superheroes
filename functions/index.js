@@ -23,13 +23,13 @@ exports.getDcHeroes = functions.https.onRequest((request, response) => {
     .get()
     .then((snapshot) => {
       let heroes = []
+
       snapshot.forEach((doc) => {
-        heroes.push({
-          ...doc.data(),
-          id: doc.id,
-        })
+        heroes.push(Object.assign({}, doc.data(), { id: doc.id }))
       })
+
       response.status(200).json(heroes)
+      return null
     })
     .catch((err) => {
       console.log('Error getting documents', err)
