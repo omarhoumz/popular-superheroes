@@ -3,20 +3,11 @@ const admin = require('firebase-admin')
 
 const fetch = require('node-fetch')
 
-if (process.env.NODE_ENV === 'production') {
-  admin.initializeApp()
-} else {
-  const serviceAccount = require('./fireb-adminsdk.json')
-
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://popular-superheroes.firebaseio.com',
-  })
-}
+admin.initializeApp()
 
 const NETLIFY_BUILD_HOOK = functions.config().netlify
   ? functions.config().netlify.build_hook
-  : ''
+  : 'https://api.netlify.com/build_hooks/5eef8c69b11b6df1e1724ad6'
 
 exports.getDcHeroes = functions.https.onRequest((request, response) => {
   if (process.env.NODE_ENV !== 'production') {
