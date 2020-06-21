@@ -11,7 +11,7 @@ node_js:
 # safelist
 branches:
   only:
-    - master
+    - main
     - develop
 
 jobs:
