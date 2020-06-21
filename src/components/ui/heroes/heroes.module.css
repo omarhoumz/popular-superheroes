@@ -1,0 +1,8 @@
+.heroes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 275px));
+  gap: 1em;
+
+  margin: 0;
+  padding: 2em;
+}
