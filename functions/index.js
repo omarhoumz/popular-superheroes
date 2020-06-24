@@ -35,6 +35,10 @@ exports.getDcHeroes = functions.https.onRequest((request, response) => {
 })
 
 function triggerBuild() {
+  if (process.env.NODE_ENV !== 'production') {
+    return null
+  }
+
   const requestOptions = {
     method: 'POST',
   }
@@ -43,6 +47,8 @@ function triggerBuild() {
     .then((response) => response.text())
     .then((result) => console.log(result))
     .catch((error) => console.log('error', error))
+
+  return null
 }
 
 exports.triggerBuildOnDcHeroesCreated = functions.firestore

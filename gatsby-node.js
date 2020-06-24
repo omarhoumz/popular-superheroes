@@ -6,10 +6,11 @@ const DC_HEROES_NODE_TYPE = 'DcHeroes'
 const YOUR_PROJECT_ID = 'popular-superheroes'
 const DATA_CENTER_REGION = 'us-central1'
 
-const functionsBaseEndpoint =
-  process.env.NODE_ENV === 'production'
-    ? `https://${DATA_CENTER_REGION}-${YOUR_PROJECT_ID}.cloudfunctions.net`
-    : `http://localhost:5001/${YOUR_PROJECT_ID}/${DATA_CENTER_REGION}`
+const functionsBaseEndpoint = `https://${DATA_CENTER_REGION}-${YOUR_PROJECT_ID}.cloudfunctions.net`
+// const functionsBaseEndpoint =
+//   process.env.NODE_ENV === 'production'
+//     ? `https://${DATA_CENTER_REGION}-${YOUR_PROJECT_ID}.cloudfunctions.net`
+//     : `http://localhost:5001/${YOUR_PROJECT_ID}/${DATA_CENTER_REGION}`
 
 const getHeroesFunction = `${functionsBaseEndpoint}/getDcHeroes`
 
